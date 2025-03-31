@@ -1,0 +1,7 @@
+STEPS 1:
+ 
+ -> create backend and frontend folder and then make file and install dependecies;
+ -> make folder like model for database schema, cotroller for entry in database auth for authentication router for routing pages
+ ->create .env folder to store the MONGO_URI for url of database connection and PORT for port to run in the browser;
+ ->add connection to the database in the db->connectMongoDB file:
+ ->export function form above file and put in the server file in app.listen and 
