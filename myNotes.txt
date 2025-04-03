@@ -6,3 +6,10 @@ STEPS 1:
  ->add connection to the database in the db->connectMongoDB file:
  ->export function form above file and put in the server file in app.listen and 
 -> create uesr module to enter user data for signup and (check if user info is already exist or not)then use bcrypt for hash and generate json web tolken in a separate folder lib/utils/generateToken
+
+->  now add different functionality like signup, login, and getMe to access the user data and verify using POSTMAN, and add protectroute in getMe to find the user using the sessin and jwt token in cookie.
+
+
+
+NOTE->authRoutes for loggin, signup, and and getMe
+and ->userRputes for update, delete, and getUsers, getUser, updateUser and deleteUser.
