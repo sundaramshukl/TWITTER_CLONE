@@ -73,7 +73,7 @@ export const login = async (req, res) => {
 
         // If no user is found, return an error
         if (!user) {
-            return res.status(400).json({ error: "Invalid username or password" });
+            return res.status(400).json({ error: "1:Invalid username or password" });
         }
 
         // Check if password matches
@@ -81,7 +81,7 @@ export const login = async (req, res) => {
 
         // If password doesn't match
         if (!isPasswordMatch) {
-            return res.status(400).json({ error: "Invalid username or password" });
+            return res.status(400).json({ error: "2:Invalid username or password" });
         }
 
         // Generate token and set it as a cookie
@@ -121,7 +121,7 @@ export const logout= async(req, res)=>{
 
 export const getMe= async(req, res)=>{
     try{
-        const user= await User.findById(req.user._id).select("-password");
+        const user= await User.findById(req.user.userId).select("-password");
         res.status(200).json(user);
 
 
