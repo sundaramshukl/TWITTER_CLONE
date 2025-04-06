@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import {v2 as cloudinary} from "cloudinary";
 import Notification from "../models/notification.model.js";
 export const getUserProfile = async (req, res) => {
-    const username=req.params;
+    const {username}=req.params;
     try {
         const user= await User.findOne({username}).select("-password");
         if(!user){
