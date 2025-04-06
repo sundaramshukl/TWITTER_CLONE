@@ -11,7 +11,7 @@ export const getNotifications = async (req, res) => {
     } catch (error) {
         console.error("Error fetching notifications:", error);
         res.status(500).json({ error: "Internal server error" }); // Handle errors
-        
+    
     }
 }
 export const deleteNotifications = async (req, res) => {
