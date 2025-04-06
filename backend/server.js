@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import authRoute from "./routes/auth.route.js";
 import userRoute from "./routes/user.route.js";
-import postRoute from "./routes/post.route.js"
+import postRoute from "./routes/post.route.js";
+import notificationRoute from "./routes/notification.route.js";
 import connectMongoDB from "./db/connectMongoDB.js";
 import cookieParser from "cookie-parser";
 import {v2 as cloudinary} from "cloudinary";
@@ -30,7 +31,7 @@ const PORT=process.env.PORT ||8000;
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/posts", postRoute);
-
+app.use("/api/notifications", notificationRoute);
 app.listen(PORT, async () => {
     console.log(`Server is running on port ${PORT}`);
     await connectMongoDB(); // Ensure the database connects when server starts
